@@ -15,10 +15,10 @@ public class SimpleMenu {
         boolean isContinuing = true;
         while (isContinuing) {
             System.out.println("====GAME====");
-            System.out.println("1. Genarate lucky number");
+            System.out.println("1. Generate lucky number");
             System.out.println("0. Exit");
 
-            System.out.print("Please enter your opotion: ");
+            System.out.print("Please enter your option: ");
             Scanner scanner = new Scanner(System.in);
             int userOption = scanner.nextInt();
 
