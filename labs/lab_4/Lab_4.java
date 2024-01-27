@@ -11,8 +11,8 @@ public class Lab_4 {
         //1. Generating an ArrayList
         System.out.print("Please input for the size of array list: ");
         int arrayListSize = getUserInput();
-        while (arrayListSize == 0 || arrayListSize == 1) {
-            System.out.print("Please input a number differs 0 or 1: ");
+        while (arrayListSize <= 1) {
+            System.out.print("Please input a positive number differs 0 or 1: ");
             arrayListSize = getUserInput();
         }
 
@@ -29,14 +29,15 @@ public class Lab_4 {
         while (userInput != 5) {
             switch (userInput) {
                 case 1:
-                    System.out.println("Your numbers in the array list are: ");
+                    System.out.println("==*>>> Your numbers in the array list are: ");
                     printAllNumber(arrayNumberList);
+                    System.out.println();
                     break;
                 case 2:
-                    System.out.printf("Maximum value is: %d", maximumValue(arrayNumberList));
+                    System.out.printf("==*>>> Maximum value is: %d\n", maximumValue(arrayNumberList));
                     break;
                 case 3:
-                    System.out.printf("Minimum value is: %d", minimumValue(arrayNumberList));
+                    System.out.printf("==*>>> Minimum value is: %d\n", minimumValue(arrayNumberList));
                     break;
                 case 4:
                     System.out.print("Please input a number which you want to search: ");
@@ -51,8 +52,8 @@ public class Lab_4 {
             printMenuOption();
             System.out.print("Please input an option: ");
             userInput = getUserInput();
-
         }
+
         System.out.println("See you again!!!!");
     }
 
@@ -81,7 +82,7 @@ public class Lab_4 {
 
     public static void printAllNumber(List<Integer> arrayList) {
         for (Integer i : arrayList)
-            System.out.print(i + "\t\t");
+            System.out.print("\t" + i + "\t\t");
     }
 
     public static int maximumValue(List<Integer> arrayList) {
@@ -108,11 +109,11 @@ public class Lab_4 {
 
         for (int index = 0; index < arrayListNumbers.size(); index++)
             if (arrayListNumbers.get(index) == searchValue) {
-                System.out.printf("Found number %d at index %d", arrayListNumbers.get(index), index);
+                System.out.printf("==*>>> Found number %d at index %d\n", arrayListNumbers.get(index), index);
                 return;
             }
 
-        System.out.printf("Number %d not found", searchValue);
+        System.out.printf("==*>>> Number %d not found\n", searchValue);
     }
 
 
