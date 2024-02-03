@@ -18,7 +18,7 @@ public class Lab_6 {
         checkUrl("https://google.com");
 
         //Lab 6.5
-        optional("  Hello, tui   ten teo, ban co phai ten teo khong?  ");
+        groupAndCountWord("  Hello, tui   ten teo, ban co phai ten teo khong?  ");
 
         //Lab 6.5 kết quả in không theo thứ tự như chuỗi đã nhập, em hơi bí khúc này chưa biết xử lý sao,
         //nhờ anh Tụ, bạn mentor hỗ trợ thêm ạ :(((((
@@ -114,7 +114,7 @@ public class Lab_6 {
         System.out.println(".".concat(domain[domain.length - 1]));
     }
 
-    public static void optional(String string) {
+    public static void groupAndCountWord(String string) {
 
         /**
          * Idea:
