@@ -20,8 +20,6 @@ public class Lab_6 {
         //Lab 6.5
         groupAndCountWord("  Hello, tui   ten teo, ban co phai ten teo khong?  ");
 
-        //Lab 6.5 kết quả in không theo thứ tự như chuỗi đã nhập, em hơi bí khúc này chưa biết xử lý sao,
-        //nhờ anh Tụ, bạn mentor hỗ trợ thêm ạ :(((((
     }
 
 
@@ -72,7 +70,7 @@ public class Lab_6 {
                 System.out.println("Password is correct!!!");
                 break;
             } else if (count == 3)
-                System.out.println("Password is incorrect. Please try after 24hrs");
+                System.out.println("Password is incorrect. Please try after 24 hrs");
             else System.out.printf("Password is incorrect. You have %d times to try again\n", 3 - count);
         }
     }
@@ -92,7 +90,11 @@ public class Lab_6 {
             if (Character.isDigit(character))
                 listNumber.add(Integer.valueOf(String.valueOf(character)));
 
-        System.out.print(listNumber);
+        System.out.println("List number only: ");
+        for (Integer number : listNumber)
+            System.out.printf("%d\t", number);
+
+        System.out.println();
     }
 
     public static void checkUrl(String url) {
@@ -105,13 +107,16 @@ public class Lab_6 {
          */
 
         String[] protocol = url.split(":");
-        String[] domain = url.split("\\.");
+        String[] topLevelDomain = url.split("\\.");
+        String[] secondLevelDomain = url.split("://");
 
         System.out.println("The URL ".concat(url).concat(" has: "));
         System.out.print("\t+Protocol: ");
         System.out.println(protocol[0]);
-        System.out.print("\t+Domain: ");
-        System.out.println(".".concat(domain[domain.length - 1]));
+        System.out.print("\t+Domain name: ");
+        System.out.println("".concat(secondLevelDomain[secondLevelDomain.length - 1]));
+        System.out.print("\t+Top level Domain: ");
+        System.out.println(".".concat(topLevelDomain[topLevelDomain.length - 1]));
     }
 
     public static void groupAndCountWord(String string) {
