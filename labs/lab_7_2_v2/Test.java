@@ -1,4 +1,4 @@
-package labs.lab_7_2;
+package labs.lab_7_2_v2;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,6 +19,8 @@ public class Test {
 
         List<Animal> animalList = Arrays.asList(h1, h2, h3, d1, d2, d3, t1, t2);
 
+        ControllerAnimal.race(animalList);
+        ControllerAnimal.race(animalList);
         ControllerAnimal.race(animalList);
         ControllerAnimal.race(animalList);
 
