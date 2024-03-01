@@ -1,5 +1,4 @@
 package labs.lab_7_2_v2_fixed;
-
 import java.util.List;
 
 public class ControllerAnimal {
