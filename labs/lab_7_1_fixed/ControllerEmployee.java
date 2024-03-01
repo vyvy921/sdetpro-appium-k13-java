@@ -1,4 +1,4 @@
-package labs.lab_7_1;
+package labs.lab_7_1_fixed;
 
 import java.util.List;
 

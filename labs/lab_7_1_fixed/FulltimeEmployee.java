@@ -1,8 +1,8 @@
-package labs.lab_7_1;
+package labs.lab_7_1_fixed;
 
 public class FulltimeEmployee extends Employee{
 
     public FulltimeEmployee() {
-        super.salary = 50000;
+        this.salary = 50000;
     }
 }

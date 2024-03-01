@@ -10,6 +10,7 @@ public class Animal {
         this.name = name;
     }
 
+    //sevice method
     public int getSpeed() {
         return speed;
     }
@@ -18,8 +19,10 @@ public class Animal {
         return name;
     }
 
+    //support method
     public int randomSpeed(int speed) {
 
         return new SecureRandom().nextInt(speed);
     }
+
 }

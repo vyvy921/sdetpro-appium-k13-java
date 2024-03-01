@@ -1,4 +1,4 @@
-package labs.lab_7_2_v2;
+package labs.lab_7_2_v2_fixed;
 
 import java.security.SecureRandom;
 
@@ -19,8 +19,10 @@ public class Animal {
         return name;
     }
 
-    public void runRandomSpeed() {
+    //support method
+    public int run() {
         runSpeed = new SecureRandom().nextInt(maxSpeed);
+        return runSpeed;
     }
 
 
