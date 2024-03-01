@@ -19,10 +19,14 @@ public class Test {
 
         List<Animal> animalList = Arrays.asList(h1, h2, h3, d1, d2, d3, t1, t2);
 
+        System.out.println("Race");
         ControllerAnimal.race(animalList);
         ControllerAnimal.race(animalList);
-        ControllerAnimal.race(animalList);
-        ControllerAnimal.race(animalList);
+
+        System.out.println("race With Random Speech For Each Run");
+        ControllerAnimal.raceWithRandomSpeechForEachRun(animalList);
+        ControllerAnimal.raceWithRandomSpeechForEachRun(animalList);
+        ControllerAnimal.raceWithRandomSpeechForEachRun(animalList);
 
     }
 }

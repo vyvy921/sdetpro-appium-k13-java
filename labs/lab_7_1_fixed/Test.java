@@ -10,8 +10,8 @@ public class Test {
         Employee fte2 = new FulltimeEmployee();
         Employee fte3 = new FulltimeEmployee(); //15 + 8 = 23
 
-        Employee ce1 = new ConstractEmplyee();
-        Employee ce2 = new ConstractEmplyee();
+        Employee ce1 = new ConstractEmployee();
+        Employee ce2 = new ConstractEmployee();
 
         List<Employee> employeeList = Arrays.asList(fte1, fte2, fte3, ce1, ce2);
 

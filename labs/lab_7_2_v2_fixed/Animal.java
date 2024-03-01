@@ -19,8 +19,10 @@ public class Animal {
         return name;
     }
 
-    public void runRandomSpeed() {
+    //support method
+    public int run() {
         runSpeed = new SecureRandom().nextInt(maxSpeed);
+        return runSpeed;
     }
 
 
