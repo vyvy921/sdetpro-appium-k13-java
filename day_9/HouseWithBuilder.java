@@ -4,17 +4,29 @@ public class HouseWithBuilder {
 
     private String color = "White";
     private String topRoof = "Red";
-    public int windows = 4;
-    public int mainDoors = 1;
+    private int windows = 4;
+    private int mainDoors = 1;
 
-    // method chain
-
-    protected HouseWithBuilder(Builder builder){
+    //Create constructor from myself
+    //Constructor ko cho bên ngoài gọi
+    protected HouseWithBuilder(Builder builder) {
         this.color = builder.color;
         this.topRoof = builder.topRoof;
         this.windows = builder.windows;
         this.mainDoors = builder.mainDoors;
     }
+
+    @Override
+    public String toString() {
+        return "HouseWithBuilder{" +
+                "color='" + color + '\'' +
+                ", topRoof='" + topRoof + '\'' +
+                ", windows=" + windows +
+                ", mainDoors=" + mainDoors +
+                '}';
+    }
+
+    // method chain
 
     // READ-ONLY
 
@@ -35,11 +47,14 @@ public class HouseWithBuilder {
     }
 
     // Inner class
+    // sinh ra object, mà object đó chỉ có ý nghĩa khi được tạo ra bên trong 1 object khác
+    // 1 object sinh ra để phục cho 1 đối tượng riêng biệt
+    // là 1 object dùng chung => static
     public static class Builder {
         private String color = "White";
         private String topRoof = "Red";
-        public int windows = 4;
-        public int mainDoors = 1;
+        private int windows = 4;
+        private int mainDoors = 1;
 
         // WRITE ONLY
         public void setColor(String color) {
@@ -58,8 +73,11 @@ public class HouseWithBuilder {
             this.mainDoors = mainDoors;
         }
 
+        // return outer class
         public HouseWithBuilder build() {
             // What is "this" in this case?
+            //this: refer to object will be created in the future
+            // from class Builder
             return new HouseWithBuilder(this);
         }
     }
