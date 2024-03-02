@@ -1,6 +1,6 @@
 package day_9;
 
-public class HouseWithBuilder {
+public class HouseWithBuilder_MethodChains {
 
     private String color = "White";
     private String topRoof = "Red";
@@ -9,7 +9,7 @@ public class HouseWithBuilder {
 
     //Create constructor from myself
     //Constructor ko cho bên ngoài gọi
-    protected HouseWithBuilder(Builder builder) {
+    protected HouseWithBuilder_MethodChains(Builder builder) {
         this.color = builder.color;
         this.topRoof = builder.topRoof;
         this.windows = builder.windows;
@@ -55,28 +55,32 @@ public class HouseWithBuilder {
         private int mainDoors = 1;
 
         // WRITE ONLY
-        public void setColor(String color) {
+        public Builder setColor(String color) {
             this.color = color;
+            return this;
         }
 
-        public void setTopRoof(String topRoof) {
+        public Builder setTopRoof(String topRoof) {
             this.topRoof = topRoof;
+            return this;
         }
 
-        public void setWindows(int windows) {
+        public Builder setWindows(int windows) {
             this.windows = windows;
+            return this;
         }
 
-        public void setMainDoors(int mainDoors) {
+        public Builder setMainDoors(int mainDoors) {
             this.mainDoors = mainDoors;
+            return this;
         }
 
         // return outer class
-        public HouseWithBuilder build() {
+        public HouseWithBuilder_MethodChains build() {
             // What is "this" in this case?
             //this: refer to object will be created in the future
             // from class Builder
-            return new HouseWithBuilder(this);
+            return new HouseWithBuilder_MethodChains(this);
         }
     }
 
