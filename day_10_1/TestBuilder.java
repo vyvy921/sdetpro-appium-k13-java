@@ -1,4 +1,6 @@
-package day_9;
+package day_10_1;
+
+import day_10_1.HouseWithBuilder;
 
 public class TestBuilder {
 

@@ -1,4 +1,4 @@
-package day_9;
+package day_10_1;
 
 public class HouseWithBuilder {
 
