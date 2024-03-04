@@ -7,5 +7,10 @@ public abstract class Employee_Abs {
         return salary;
     }
 
+    //Delegate implementations for concrete classes
     public abstract void setSalary(int salary);
+
+    protected String generateGreetingPrefix(){
+        return "Hello ";
+    }
 }

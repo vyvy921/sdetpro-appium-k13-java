@@ -1,8 +1,9 @@
 package labs.lab_10;
 
-public class FTE extends Employee_Abs{
+public class FTE extends Employee_Abs {
+    private String name;
 
-    public FTE(){
+    public FTE() {
         this.setSalary(50000);
     }
 
@@ -10,4 +11,9 @@ public class FTE extends Employee_Abs{
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    public void sayHello() {
+        String greetingStr = generateGreetingPrefix() + "child";
+    }
+
 }

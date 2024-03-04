@@ -4,15 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Controller {
-    public static void race(List<Animal> animalList) {
+    public static void getWinner(List<Animal> animalList) {
 
         //1. Filter Animals can run
+        //List: null, empty
         List<Animal> filteredList = new ArrayList<>();
         for (Animal animal : animalList)
             if (!animal.isFlyable())
                 filteredList.add(animal);
 
-        //2. Racing
+        //2. Racing. Get winner
         int max_speed = filteredList.get(0).getRunSpeed();
         Animal winner = filteredList.get(0);
 

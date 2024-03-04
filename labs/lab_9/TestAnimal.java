@@ -38,7 +38,7 @@ public class TestAnimal {
                 .build();
 
         List<Animal> animalList = Arrays.asList(tiger, falcon, dog, snake, eagle);
-        Controller.race(animalList);
+        Controller.getWinner(animalList);
 
         System.out.println(animalList);
 
