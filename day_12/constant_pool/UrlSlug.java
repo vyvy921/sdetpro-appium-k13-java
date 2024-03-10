@@ -2,16 +2,14 @@ package day_12.constant_pool;
 
 public interface UrlSlug {
 
-    String QA_ENV = "/qa-sdetpro";
-    String STAGING_ENV = "/staging-sdetpro";
-    String BASE_URL = "https://sdetpro.com";
+    String QA_ENV = "qa.com";
+    String STAGING_ENV = "staging.com";
 
-    default String getQaEnv() {
-        return BASE_URL.concat(QA_ENV);
-    }
+    String BASE_URL = "sdetpro/";
 
-    static void saySth() {
-        System.out.println("Hello");
+    default String getUrl(String url) {
+
+        return BASE_URL.concat(url);
     }
 
 }
