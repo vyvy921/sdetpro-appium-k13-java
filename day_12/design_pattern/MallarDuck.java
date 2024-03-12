@@ -4,5 +4,6 @@ public class MallarDuck extends Duck{
 
     public MallarDuck() {
         this.quackBehavior = new Quack();
+        this.flyBehavior = new FlyWithWings();
     }
 }

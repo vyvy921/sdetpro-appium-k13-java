@@ -9,8 +9,15 @@ public class TestDuck {
         Duck decoy = new Decoy();
 
         mallarDuck.performQuack();
+        mallarDuck.performFly();
+
         babyDuck.performQuack();
+        babyDuck.performFly();
+
         decoy.performQuack();
+        decoy.changeQuackBehavior(new Quack());
+        decoy.performQuack();
+
 
 //        Duck duck = new Duck();
 //        duck.performQuack(); //Null pointer exception
