@@ -9,7 +9,7 @@ public class StringLearning2 {
         String badWordContainer = "    bad,,, very bad sth else, bad!!    ";
         String filteredStr = badWordContainer.replace("bad", "***").replace(",", "").trim();
         System.out.println(filteredStr);
-        System.out.println(badWordContainer);
+        System.out.println(badWordContainer); //Does not be changed
 
         //Substring, indexOf, split
         String url = "https://sdetpro.com";

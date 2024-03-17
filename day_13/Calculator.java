@@ -27,31 +27,41 @@ public class Calculator {
         return num1 / num2;
     }
 
+    public static int divideV3(int num1, int num2) {
+
+        return num1 / num2;
+    }
+
     public static void main(String[] args) {
         /*
          * 1. Unchecked exception
          * Calculator.divide(3, 0);
          * */
-
-        try {
-            Calculator.divide(3, 0);
-           // Calculator.divideV2(3, 0);
-        } catch (IllegalArgumentException | IllegalStateException e) {
-            System.out.println("Illegal Argument Exception");
-        } catch (DidivedByZero d) {
-            System.out.println("Divided by zero");
-        } catch (ArithmeticException e2) {
-            System.out.println("Arithmetic Exception");
-        } catch (Exception e) {
-            System.out.println("All kinds of exception");
-        } finally {
-            System.out.println("This is finally");
-        }
+        Calculator.divide(3, 0);
+//        try {
+//            Calculator.divide(3, 0);
+////            Calculator.divideV2(3, 0);
+////            Calculator.divideV3(3, 0);
+//        } catch (IllegalArgumentException | IllegalStateException e) {
+//            System.out.println("Illegal Argument Exception");
+////        } catch (DidivedByZero d) {
+////        } catch (ArithmeticException e2) {
+////            System.out.println("Arithmetic Exception");
+//        } catch (Exception e) {
+////            throw new DidivedByZero("Custom Exception");
+////            System.out.println("All kinds of exception");
+//        } finally {
+//            System.out.println("This is finally");
+//        }
 
         System.out.println("Continue processing ....");
-
-
     }
+
+    /*
+     * Action trigger(function) (1): paras + logic -> output
+     * (1) Force to handle the Exception - Checked Exception - Compiler - compile time - IOException
+     *
+     * */
 
 
 }
