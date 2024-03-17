@@ -19,11 +19,13 @@ public class Calculator {
 
         try {
             result = divide(num1, num2);
-        } catch (DividedByZeroCheckedException ignored) {
-            System.out.println("Please input num 2 # 0");
+        } catch (DividedByZeroCheckedException e) {
+            e.printStackTrace();
+            System.exit(1);
         }
 
         System.out.println(result);
+        System.out.println("Doing ....");
     }
 
     public static void main(String[] args) {
